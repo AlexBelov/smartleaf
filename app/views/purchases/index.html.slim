@@ -1,4 +1,5 @@
-= link_to 'Register new purchase', new_purchase_path
+- if current_user
+  = link_to 'Register new purchase', new_purchase_path
 
 - @purchases.each do |purchase|
   p = link_to purchase.title, purchase_path(purchase)
