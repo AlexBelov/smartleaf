@@ -1,0 +1,7 @@
+h1 = @purchase.name
+h2 Line items:
+- @purchase.line_items.each do |line_item|
+  p = '$' + line_item.amount.to_s
+h2
+  | Amount:
+  = @purchase.total
