@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: '123'
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: smartleaf_development
+
+test:
+  <<: *default
+  database: smartleaf_test
+
+production:
+  <<: *default
+  database: smartleaf_production
