@@ -1,0 +1,7 @@
+= render partial: 'menu'
+
+- if @users.empty?
+  h2 no corresponding users
+
+- @users.each do |user|
+  p = user.email

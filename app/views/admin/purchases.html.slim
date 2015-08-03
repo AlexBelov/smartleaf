@@ -1,0 +1,4 @@
+= render partial: 'menu'
+
+- @purchases.each do |purchase|
+  p = link_to "#{purchase.try(:user).try(:email)} #{purchase.title}", purchase_path(purchase)
