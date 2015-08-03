@@ -1,4 +1,7 @@
 = render partial: 'menu'
 
+- if @purchases.empty?
+  h2 no corresponding purchases
+
 - @purchases.each do |purchase|
   p = link_to "#{purchase.try(:user).try(:email)} #{purchase.title}", purchase_path(purchase)
